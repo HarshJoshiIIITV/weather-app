@@ -1,21 +1,20 @@
-<div class="card" style="width:inherit">
+<div class="card mystyle_card" style="width:inherit">
   <img (click)=toggleDisplay() [src]="'http://openweathermap.org/img/w/' + weatherData?.weather[0].icon + '.png'"
-    style="width: 150px;"
-    onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsLbutL5lsRQonuFD7nYc4ZnDsWYXL5ww4z7sMyA9t1TOv87l_';"
+    onerror="this.src='https://play-lh.googleusercontent.com/lPfhsMXmCAVrYe3Im-YEuldaIylbh0-ZMxUSf6sd-alEAphC2iGnsaEc3gJGC1LTE1g';"
     >
   <div class="card-body">
     <form *ngIf="isShow" [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
       <div class="form-group">
         <input class="form-control" type="text" aria-describedby="weatherLocation"
-          placeholder="Please input a Location" formControlName="location" />
+          placeholder="Enter Location" formControlName="location" />
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-success btn-md" (click)=displayData()>
+        <button type="submit" class="btn btn-md btn-secondary" (click)=displayData()>
           Search</button>
       </div>
     </form>
-    <div *ngIf="isData">
-      {{this.weatherData?.main.temp}}°C
+    <div class="output_data" *ngIf="isData">
+      Temperature is {{this.weatherData?.main.temp}}°C
     </div>
   </div>
 </div>

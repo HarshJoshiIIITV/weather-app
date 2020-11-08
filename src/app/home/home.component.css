@@ -1,0 +1,10 @@
+.title{
+  text-align:center;
+  margin:10px;
+  border-bottom: 1px solid black;
+}
+p{
+  font-size: 10px;
+  text-align: right;
+  font-weight: bold;
+}

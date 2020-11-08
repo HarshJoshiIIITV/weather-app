@@ -1,0 +1,30 @@
+.mystyle_card{
+  background-color: lightblue;
+  padding: 10px;
+  margin: 10px;
+}
+
+img{
+  width: 100%;
+  height: 150px;
+}
+
+input{
+  background:none;
+  border:1px solid black;
+  color: black !important;
+}
+input::placeholder{
+  font-size: 16px;
+  color: black;
+}
+
+input:focus{
+  background-color: lightblue;
+  border:1px solid black
+}
+.output_data{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
